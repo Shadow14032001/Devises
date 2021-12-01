@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1
+/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<nav>
+  <ul>
+    <li><a href="#">{{depart}}</a>
+      <ul>
+        <a *ngFor="let devise of listeDevise" (click)="setDeviseDepart(devise)" >{{devise}}</a>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li><a href="#">{{arrivee}}</a>
+      <ul>
+        <a *ngFor="let devise of listeDevise" (click)="setDeviseArrivee(devise)" >{{devise}}</a>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<br>
+<input type="text" value='{{ value2 | convert: arrivee: depart}}' [(ngModel)]='value'>
+<br>
+<input type="text" value='{{ value | convert: depart: arrivee}}' [(ngModel)]='value2'>

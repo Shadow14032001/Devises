@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css3?family=Poppins:wght@400;500;600;700&display=swmap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+li {
+    list-style: none !important;
+    color: #FFF;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  min-height: 100hv;
+  background: #329664;
+}
+
+nav ul {
+    background-color: #329664;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    line-height: 44px;
+    float: left;
+    background-color: #329664;
+}
+
+nav ul li a {
+    color: #FFF;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    border-bottom: 3px rgb(35, 116, 182) solid;
+}
+
+nav ul li ul {
+    display: none;
+}
+
+/* Rend le menu déroulant caché par défaut */
+nav ul li:hover ul {
+    /* Affiche la dropNav au survol de la souris avec la class .drop */
+    z-index: 99999;
+    display: list-item !important;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -10px;
+}
+
+nav ul li:hover ul li {
+    float: none;
+}
